@@ -71,6 +71,39 @@ This repository contains several Go projects organized by topic:
   - File output for results
 - **Run**: `go run profit_calculator.go`
 
+### 📊 Newer Projects
+
+#### `price-calculator/`
+
+- **Purpose**: Calculate tax-included prices from an input list and persist results
+- **Features**:
+  - Reads base prices from `prices.txt`
+  - Converts lines to `float64` safely with error handling
+  - Computes tax-inclusive totals for multiple tax rates (0%, 7%, 10%, 15%)
+  - Persists results as JSON (`result_0.json`, `result_7.json`, `result_10.json`, `result_15.json`)
+  - Modular packages: `conversions`, `filemanager`, `prices`
+- **Run**:
+  - `go run main.go`
+  - Outputs JSON files in the project directory
+
+#### `functions/`
+
+- **Purpose**: Practice higher-order functions and function-returning-functions
+- **Features**:
+  - Demonstrates passing functions as arguments
+  - Shows returning functions based on runtime conditions
+  - Example transforms: double and triple number operations
+- **Run**: `go run main.go`
+
+#### `array/maps/`
+
+- **Purpose**: Explore Go maps (create, read, update, delete)
+- **Features**:
+  - Initialize maps with string keys and values
+  - Read by key, add entries, and delete entries
+  - Prints state after each mutation
+- **Run**: `go run maps/map.go`
+
 ## 🚀 Getting Started
 
 ### Prerequisites

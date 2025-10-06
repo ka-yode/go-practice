@@ -32,7 +32,7 @@ func (bank *BankAccountDetails) DebitAccount(amount int64) (int64, map[string]tr
 		bank.Transactions = make(map[string]transaction)
 	}
 
-	bank.Transactions[time.Now().String()] = transaction{amount: -(amount)}
+	bank.Transactions[time.Now().String()] = transaction{-(amount)}
 	return bank.Balance, bank.Transactions, nil
 }
 

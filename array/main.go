@@ -14,7 +14,7 @@ func main() {
 	hobbies := [3]string{"Coding", "Anime", "Manga"}
 	fmt.Println("Hobbies: ", hobbies)
 
-	fmt.Println("First hobby: ", hobbies[1])
+	fmt.Println("First hobby: ", hobbies[0])
 
 	lastHobbies := hobbies[1:]
 	fmt.Println("Last two hobbies: ", lastHobbies)
@@ -22,7 +22,7 @@ func main() {
 	firstTwo := hobbies[0:2]
 	fmt.Println("First two hobbies: ", firstTwo)
 
-	firstTwo = hobbies[1:]
+	firstTwo = firstTwo[1:3]
 	fmt.Println("Second and last hobbies: ", firstTwo)
 
 	var courseGoals []string = []string{"be better at go", "land a new job"}
@@ -30,10 +30,12 @@ func main() {
 	courseGoals = append(courseGoals, "be better in all aspects")
 	fmt.Println("Course Goals: ", courseGoals)
 
-	var products []Product = []Product{{title: "Samsung", id: "7", price: 500.00},
-		{title: "Iphone", id: "4", price: 800.07}}
+	var products []Product = []Product{
+		{"Samsung", "7", 500.00},
+		{"Iphone", "4", 800.07},
+	}
 
-	products = append(products, Product{title: "Itel", id: "02", price: 350.90})
+	products = append(products, Product{"Itel", "02", 350.90})
 	fmt.Println("Products: ", products)
 
 }

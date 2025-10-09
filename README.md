@@ -69,7 +69,27 @@ This repository contains several Go projects organized by topic:
   - EBT (Earnings Before Tax) calculation
   - Profit margin analysis
   - File output for results
+  - Prompts for `Revenue`, `Expenses`, and `Tax Rate`
+  - Writes consolidated results to `finance.txt` with formatted values:
+    - `EBT: <value>` (one decimal)
+    - `Profit: <value>` (one decimal)
+    - `Ratio: <value>` (one decimal)
 - **Run**: `go run profit_calculator.go`
+
+  Example:
+
+  ```text
+  Revenue: 1000
+  Expenses: 200
+  Tax Rate: 10
+  800.0
+  720.0
+  1.111
+  # Creates finance.txt with:
+  # EBT: 800.0
+  # Profit: 720.0
+  # Ratio: 1.1
+  ```
 
 ### 📊 Newer Projects
 

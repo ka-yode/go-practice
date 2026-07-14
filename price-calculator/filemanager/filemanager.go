@@ -12,7 +12,7 @@ type FileManager struct {
 	OutputFilePath string
 }
 
-func (fm FileManager) ReadFile() ([]string, error) {
+func (fm FileManager) ReadLines() ([]string, error) {
 	file, err := os.Open(fm.InputFilePath)
 	if err != nil {
 		return nil, errors.New("an error occured when opening the file")
@@ -34,7 +34,7 @@ func (fm FileManager) ReadFile() ([]string, error) {
 	return lines, nil
 }
 
-func (fm FileManager) WriteJson(data any) error {
+func (fm FileManager) WriteResult(data any) error {
 	file, err := os.Create(fm.OutputFilePath)
 	if err != nil {
 		return errors.New("something went wront when creating the file")
